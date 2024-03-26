@@ -32,8 +32,15 @@ export const MintPane = () => {
 
   // NFTをミントするハンドラー関数
   const mintNft = async () => {
-
-  };
+         const builder = createNft(umi, {
+           mint: generateSigner(umi),
+           name: metadata.name,
+           uri: NFT_META_URI,
+           sellerFeeBasisPoints: percentAmount(0),
+         });
+        const { signature } = await builder.sendAndConfirm(umi);
+        setSignature(signature);
+      };
 
   return (
     // コンポーネントのレンダリング

@@ -336,7 +336,7 @@ To https://github.com/k-3278/solana-developer-hub-workshop-20240326
 これらの変更後に下記のコマンドを実行するとNFTの情報を変更できます。
 
 ```bash
-git add .
+ .git add
 ```
 ```bash
 git commit -m "ワークショップに合わせてNFTを作成できるように変更"
